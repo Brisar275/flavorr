@@ -1,9 +1,8 @@
 import React from 'react'
-import SobreNosotros from './componentes/SobreNosotros.js'
 
 const page = () => {
   return (
- <SobreNosotros />
+    <div>page</div>
   )
 }
 
