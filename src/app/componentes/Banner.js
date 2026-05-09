@@ -4,7 +4,7 @@ const Banner = () => {
   return (
     <div className=" bg-[url(/assets/fondo.png)] bg-black/50 bg-blend-overlay w-full h-screen bg-cover bg-center flex flex-col gap-8 items-center justify-center">
       <h1 className="text-white text-6xl text-center ">¿Qué vamos a cocinar hoy?</h1>
-      <button className="bg-blue-500 text-white p-4 text-xl hover:bg-blue-900">Explorar Recetas</button>
+      <button className="bg-blue-900 text-white p-4 text-xl hover:bg-blue-950">Explorar Recetas</button>
     </div>
   )
 }
