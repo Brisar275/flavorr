@@ -1,8 +1,9 @@
 import React from 'react'
+import Formulario from './componentes/Formulario'
 
 const page = () => {
   return (
-    <div>page</div>
+    <Formulario />
   )
 }
 
