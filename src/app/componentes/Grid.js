@@ -31,7 +31,7 @@ const Grid = () => {
   }, []);
 
   return (
-    <div className="bg-white">
+    <div className="bg-white flex flex-wrap gap-8 px-15 py-20">
       {!loading &&
         data.map((recipe) => (
           <RecipesCard
