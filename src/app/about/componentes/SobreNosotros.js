@@ -4,7 +4,7 @@ const SobreNosotros = () => {
   return (
     <div className="py-18 px-15 flex flex-col gap-10 items-center">
       <h1 className="text-4xl font-[Aurora] text-blue-900">Sobre nosotros</h1>
-      <article className="flex flex-row gap-10">
+      <article className="flex flex-row gap-7">
         <img src="/assets/pizza.jpg" alt="pizza" className="w-2/5 h-1/2"></img>
         <div className="flex flex-col gap-4">
           <section className="bg-blue-900 text-white font-[Inter] p-8">
@@ -52,7 +52,7 @@ const SobreNosotros = () => {
               Nuestro enfoque está puesto en la comida real y cotidiana: sacar
               el máximo provecho de lo que tenés a mano, perderle el miedo a
               improvisar y entender que el mejor plato es aquel que disfrutás
-              preparar. El toque final siempre va a ser tuyo.
+              preparar.
             </p>
           </section>
         </div>
