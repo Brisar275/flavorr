@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Loading from "@/app/componentes/Loading";
+import FlechaAtras from "./FlechaAtras";
 
 const RecipeContainer = ({ id }) => {
   const [data, setData] = useState();
@@ -24,7 +25,8 @@ const RecipeContainer = ({ id }) => {
   return (
     <div className="font-[Inter] bg-blue-900">
       {data ? (
-        <div className="mx-40 pt-15 flex flex-col items-center bg-white">
+        <div className="mx-40 pt-15 flex flex-col items-center bg-white pb-20">
+          <FlechaAtras/>
           <h1 className="mb-6 text-blue-900 font-[Aurora] text-4xl">
             {data.name}
           </h1>{" "}
@@ -58,7 +60,9 @@ const RecipeContainer = ({ id }) => {
 
             <div className="bg-blue-900 p-6 flex flex-col gap-3 w-full text-blue-950">
               <div className="border-2 border-blue-900 h-full mb-13 p-6 bg-white">
-                <h2 className="font-[Aurora] text-xl m-4 text-center text-blue-900">Detalles</h2>
+                <h2 className="font-[Aurora] text-xl m-4 text-center text-blue-900">
+                  Detalles
+                </h2>
                 <div className="flex items-end w-full mb-4">
                   <p>Dificultad: </p>
                   <span className="flex-grow border-b-[3px] border-dotted border-blue-900 mx-2 mb-1.5"></span>
@@ -96,39 +100,36 @@ const RecipeContainer = ({ id }) => {
                 </div>
               </div>
             </div>
-
           </div>
-
-          <div className="">
+          <div className="flex flex-cols w-full items-top justify-center gap-10 max-w-6xl mx-auto mt-10 text-blue-900">
             <div className="">
-              <h2>Ingredientes</h2>
-              <div>
+              <h2 className="font-[Aurora] mb-4 text-xl">Ingredientes</h2>
+              <div className="border-2 border-blue-900 py-4 px-8">
                 <ul>
                   {data.ingredients?.map((ingredient, index) => (
-                    <li key={index}>{ingredient}</li>
+                    <li className=" list-disc mb-2" key={index}>{ingredient}</li>
                   ))}
                 </ul>
               </div>
-
             </div>
 
             <div className="instruYvalo">
               <div>
-                <h2>Instrucciones</h2>
-                <ol>
+                <h2 className="font-[Aurora] mb-4 text-xl">Instrucciones</h2>
+                <ul>
                   {data.instructions?.map((instruction, index) => (
                     <li key={index}>{instruction}</li>
                   ))}
-                </ol>
-              </div>
-
-              <div>
-                <h2>Valoraciones</h2>
-                <p>Rating: {data.rating}</p>
-                <p>Reseñas: {data.reviewCount}</p>
+                </ul>
+                <div className="mt-6">
+              <h2 className="font-[Aurora] mb-4 text-xl">Valoraciones</h2>
+              <p>Rating: {data.rating}</p>
+              <p>Reseñas: {data.reviewCount}</p>
+            </div>
               </div>
             </div>
-          </div>
+          </div>  
+            
         </div>
       ) : (
         <Loading />
