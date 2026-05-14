@@ -7,7 +7,7 @@ const Navbar = () => {
       <h1 className="font-[Aurora] text-2xl"> <Link href={'/'}>Flavor</Link></h1>
       <div>
         <ul className="flex flex-nowrap gap-4 font-[Inter] text-white">
-          <li><Link href={'/'}>inicio</Link></li>
+          <li><Link href={'/'}>Inicio</Link></li>
           <li><Link href={'/about'}>Sobre Nosotros</Link></li>
           <li><Link href={'/contacto'}>Contacto</Link></li>
         </ul>

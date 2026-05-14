@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"; // useState es para manejar el esta
 import RecipesCard from "./RecipesCard";
 import parsedData from "../data/recipes";
 import axios from "axios";
+import Loading from "./Loading";
 
 import React from "react";
 
@@ -31,7 +32,7 @@ const Grid = () => {
   }, []);
 
   return (
-    <div className="bg-white flex flex-wrap gap-8 px-15 py-20">
+    <div id="recetas" className="bg-white px-15 py-20 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 p-4 items-stretch">
       {!loading &&
         data.map((recipe) => (
           <RecipesCard
@@ -41,7 +42,7 @@ const Grid = () => {
             id={recipe.id}
           />
         ))}
-      {loading && "loading..."}
+      {loading && <Loading />}
       {error && "Error"}
     </div>
   );
