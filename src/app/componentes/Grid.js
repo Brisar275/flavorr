@@ -32,18 +32,27 @@ const Grid = () => {
   }, []);
 
   return (
-    <div id="recetas" className="bg-white px-15 py-20 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 p-4 items-stretch">
-      {!loading &&
-        data.map((recipe) => (
-          <RecipesCard
-            key={recipe.id}
-            name={recipe.name}
-            image={recipe.image}
-            id={recipe.id}
-          />
-        ))}
-      {loading && <Loading />}
-      {error && "Error"}
+    <div>
+      <h2 className="text-blue-900 font-[Aurora] text-4xl px-15 pt-15">
+        Recetas
+      </h2>
+
+      <div
+        id="recetas"
+        className="bg-white px-15 py-20 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 p-4 items-stretch"
+      >
+        {!loading &&
+          data.map((recipe) => (
+            <RecipesCard
+              key={recipe.id}
+              name={recipe.name}
+              image={recipe.image}
+              id={recipe.id}
+            />
+          ))}
+        {loading && <Loading />}
+        {error && "Error"}
+      </div>
     </div>
   );
 };
