@@ -32,15 +32,12 @@ const Grid = () => {
   }, []);
 
   return (
-    <div className="bg-white px-15 py-20">
+    <div id="recetas" className="bg-white px-15 py-20">
       <h2 className="text-blue-900 font-[Aurora] text-4xl p-5">
         Recetas
       </h2>
 
-      <div
-        id="recetas"
-        className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 p-4 items-stretch"
-      >
+      <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 p-4 items-stretch" >
         {!loading &&
           data.map((recipe) => (
             <RecipesCard
