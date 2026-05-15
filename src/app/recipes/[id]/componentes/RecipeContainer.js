@@ -16,7 +16,6 @@ const RecipeContainer = ({ id }) => {
         const responseDataId = await responseId.json();
         setData(responseDataId);
       } catch (error) {
-        console.log("Mi error fue", error);
       }
     };
     getData();
